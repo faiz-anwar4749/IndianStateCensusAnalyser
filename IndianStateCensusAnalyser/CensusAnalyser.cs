@@ -7,7 +7,7 @@ namespace IndianStateCensusAnalyser
     {
         public enum Country
         {
-            INDIA,
+            INDIA, US, Brazil
         }
 
         Dictionary<string, CensusDTO> dataMap;
@@ -16,6 +16,11 @@ namespace IndianStateCensusAnalyser
         {
             dataMap = new CSVAdapterFactory().LoadCsvData(country, csvFilePath, dataHeaders);
             return dataMap;
+        }
+
+        public void LoadCensusData(string wrongIndianStateCensusFileType, Country iNDIA, string indianStateCensusHeaders)
+        {
+            throw new NotImplementedException();
         }
     }
 }
